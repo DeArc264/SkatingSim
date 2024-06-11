@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "JOAO_BGS_TASK",
+			"Path": "C:\\Users\\jrica\\Documents\\GitHub\\SkatingSim\\JOAO_BGS_TASK\\Source\\JOAO_BGS_TASK.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "JOAO_BGS_TASKEditor",
+			"Path": "C:\\Users\\jrica\\Documents\\GitHub\\SkatingSim\\JOAO_BGS_TASK\\Source\\JOAO_BGS_TASKEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

@@ -1,0 +1,13 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\jrica\\documents\\github\\skatingsim\\joao_bgs_task\\intermediate\\build\\win64\\unrealeditor\\inc\\joao_bgs_task\\uht\\joao_bgs_task.init.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\jrica\\documents\\github\\skatingsim\\joao_bgs_task\\intermediate\\build\\win64\\x64\\joao_bgs_taskeditor\\development\\engine\\sharedpch.engine.shadowerrors.inclorderunreal5_0.h.pch",
+        "Includes": [
+            "c:\\users\\jrica\\documents\\github\\skatingsim\\joao_bgs_task\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\joao_bgs_task\\definitions.joao_bgs_task.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

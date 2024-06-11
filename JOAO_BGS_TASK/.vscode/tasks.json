@@ -1,0 +1,437 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "JOAO_BGS_TASK Win64 Debug Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"JOAO_BGS_TASK",
+				"Win64",
+				"Debug",
+				"C:\\Users\\jrica\\Documents\\GitHub\\SkatingSim\\JOAO_BGS_TASK\\JOAO_BGS_TASK.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\UE_5.2"
+			}
+		},
+		{
+			"label": "JOAO_BGS_TASK Win64 Debug Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"JOAO_BGS_TASK",
+				"Win64",
+				"Debug",
+				"C:\\Users\\jrica\\Documents\\GitHub\\SkatingSim\\JOAO_BGS_TASK\\JOAO_BGS_TASK.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"JOAO_BGS_TASK Win64 Debug Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\UE_5.2"
+			}
+		},
+		{
+			"label": "JOAO_BGS_TASK Win64 Debug Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"JOAO_BGS_TASK",
+				"Win64",
+				"Debug",
+				"C:\\Users\\jrica\\Documents\\GitHub\\SkatingSim\\JOAO_BGS_TASK\\JOAO_BGS_TASK.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\UE_5.2"
+			}
+		},
+		{
+			"label": "JOAO_BGS_TASK Win64 DebugGame Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"JOAO_BGS_TASK",
+				"Win64",
+				"DebugGame",
+				"C:\\Users\\jrica\\Documents\\GitHub\\SkatingSim\\JOAO_BGS_TASK\\JOAO_BGS_TASK.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\UE_5.2"
+			}
+		},
+		{
+			"label": "JOAO_BGS_TASK Win64 DebugGame Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"JOAO_BGS_TASK",
+				"Win64",
+				"DebugGame",
+				"C:\\Users\\jrica\\Documents\\GitHub\\SkatingSim\\JOAO_BGS_TASK\\JOAO_BGS_TASK.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"JOAO_BGS_TASK Win64 DebugGame Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\UE_5.2"
+			}
+		},
+		{
+			"label": "JOAO_BGS_TASK Win64 DebugGame Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"JOAO_BGS_TASK",
+				"Win64",
+				"DebugGame",
+				"C:\\Users\\jrica\\Documents\\GitHub\\SkatingSim\\JOAO_BGS_TASK\\JOAO_BGS_TASK.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\UE_5.2"
+			}
+		},
+		{
+			"label": "JOAO_BGS_TASK Win64 Development Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"JOAO_BGS_TASK",
+				"Win64",
+				"Development",
+				"C:\\Users\\jrica\\Documents\\GitHub\\SkatingSim\\JOAO_BGS_TASK\\JOAO_BGS_TASK.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\UE_5.2"
+			}
+		},
+		{
+			"label": "JOAO_BGS_TASK Win64 Development Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"JOAO_BGS_TASK",
+				"Win64",
+				"Development",
+				"C:\\Users\\jrica\\Documents\\GitHub\\SkatingSim\\JOAO_BGS_TASK\\JOAO_BGS_TASK.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"JOAO_BGS_TASK Win64 Development Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\UE_5.2"
+			}
+		},
+		{
+			"label": "JOAO_BGS_TASK Win64 Development Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"JOAO_BGS_TASK",
+				"Win64",
+				"Development",
+				"C:\\Users\\jrica\\Documents\\GitHub\\SkatingSim\\JOAO_BGS_TASK\\JOAO_BGS_TASK.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\UE_5.2"
+			}
+		},
+		{
+			"label": "JOAO_BGS_TASK Win64 Test Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"JOAO_BGS_TASK",
+				"Win64",
+				"Test",
+				"C:\\Users\\jrica\\Documents\\GitHub\\SkatingSim\\JOAO_BGS_TASK\\JOAO_BGS_TASK.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\UE_5.2"
+			}
+		},
+		{
+			"label": "JOAO_BGS_TASK Win64 Test Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"JOAO_BGS_TASK",
+				"Win64",
+				"Test",
+				"C:\\Users\\jrica\\Documents\\GitHub\\SkatingSim\\JOAO_BGS_TASK\\JOAO_BGS_TASK.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"JOAO_BGS_TASK Win64 Test Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\UE_5.2"
+			}
+		},
+		{
+			"label": "JOAO_BGS_TASK Win64 Test Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"JOAO_BGS_TASK",
+				"Win64",
+				"Test",
+				"C:\\Users\\jrica\\Documents\\GitHub\\SkatingSim\\JOAO_BGS_TASK\\JOAO_BGS_TASK.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\UE_5.2"
+			}
+		},
+		{
+			"label": "JOAO_BGS_TASK Win64 Shipping Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"JOAO_BGS_TASK",
+				"Win64",
+				"Shipping",
+				"C:\\Users\\jrica\\Documents\\GitHub\\SkatingSim\\JOAO_BGS_TASK\\JOAO_BGS_TASK.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\UE_5.2"
+			}
+		},
+		{
+			"label": "JOAO_BGS_TASK Win64 Shipping Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"JOAO_BGS_TASK",
+				"Win64",
+				"Shipping",
+				"C:\\Users\\jrica\\Documents\\GitHub\\SkatingSim\\JOAO_BGS_TASK\\JOAO_BGS_TASK.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"JOAO_BGS_TASK Win64 Shipping Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\UE_5.2"
+			}
+		},
+		{
+			"label": "JOAO_BGS_TASK Win64 Shipping Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"JOAO_BGS_TASK",
+				"Win64",
+				"Shipping",
+				"C:\\Users\\jrica\\Documents\\GitHub\\SkatingSim\\JOAO_BGS_TASK\\JOAO_BGS_TASK.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\UE_5.2"
+			}
+		},
+		{
+			"label": "JOAO_BGS_TASKEditor Win64 Debug Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"JOAO_BGS_TASKEditor",
+				"Win64",
+				"Debug",
+				"C:\\Users\\jrica\\Documents\\GitHub\\SkatingSim\\JOAO_BGS_TASK\\JOAO_BGS_TASK.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\UE_5.2"
+			}
+		},
+		{
+			"label": "JOAO_BGS_TASKEditor Win64 Debug Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"JOAO_BGS_TASKEditor",
+				"Win64",
+				"Debug",
+				"C:\\Users\\jrica\\Documents\\GitHub\\SkatingSim\\JOAO_BGS_TASK\\JOAO_BGS_TASK.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"JOAO_BGS_TASKEditor Win64 Debug Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\UE_5.2"
+			}
+		},
+		{
+			"label": "JOAO_BGS_TASKEditor Win64 Debug Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"JOAO_BGS_TASKEditor",
+				"Win64",
+				"Debug",
+				"C:\\Users\\jrica\\Documents\\GitHub\\SkatingSim\\JOAO_BGS_TASK\\JOAO_BGS_TASK.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\UE_5.2"
+			}
+		},
+		{
+			"label": "JOAO_BGS_TASKEditor Win64 DebugGame Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"JOAO_BGS_TASKEditor",
+				"Win64",
+				"DebugGame",
+				"C:\\Users\\jrica\\Documents\\GitHub\\SkatingSim\\JOAO_BGS_TASK\\JOAO_BGS_TASK.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\UE_5.2"
+			}
+		},
+		{
+			"label": "JOAO_BGS_TASKEditor Win64 DebugGame Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"JOAO_BGS_TASKEditor",
+				"Win64",
+				"DebugGame",
+				"C:\\Users\\jrica\\Documents\\GitHub\\SkatingSim\\JOAO_BGS_TASK\\JOAO_BGS_TASK.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"JOAO_BGS_TASKEditor Win64 DebugGame Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\UE_5.2"
+			}
+		},
+		{
+			"label": "JOAO_BGS_TASKEditor Win64 DebugGame Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"JOAO_BGS_TASKEditor",
+				"Win64",
+				"DebugGame",
+				"C:\\Users\\jrica\\Documents\\GitHub\\SkatingSim\\JOAO_BGS_TASK\\JOAO_BGS_TASK.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\UE_5.2"
+			}
+		},
+		{
+			"label": "JOAO_BGS_TASKEditor Win64 Development Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"JOAO_BGS_TASKEditor",
+				"Win64",
+				"Development",
+				"C:\\Users\\jrica\\Documents\\GitHub\\SkatingSim\\JOAO_BGS_TASK\\JOAO_BGS_TASK.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\UE_5.2"
+			}
+		},
+		{
+			"label": "JOAO_BGS_TASKEditor Win64 Development Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"JOAO_BGS_TASKEditor",
+				"Win64",
+				"Development",
+				"C:\\Users\\jrica\\Documents\\GitHub\\SkatingSim\\JOAO_BGS_TASK\\JOAO_BGS_TASK.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"JOAO_BGS_TASKEditor Win64 Development Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\UE_5.2"
+			}
+		},
+		{
+			"label": "JOAO_BGS_TASKEditor Win64 Development Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"JOAO_BGS_TASKEditor",
+				"Win64",
+				"Development",
+				"C:\\Users\\jrica\\Documents\\GitHub\\SkatingSim\\JOAO_BGS_TASK\\JOAO_BGS_TASK.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\UE_5.2"
+			}
+		}
+	]
+}
