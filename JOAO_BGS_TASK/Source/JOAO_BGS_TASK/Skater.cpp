@@ -73,7 +73,7 @@ void ASkater::Break(float Value){
 void ASkater::TurnAtRate(float Rate){
 	AddControllerYawInput(Rate * DefTurnRate * GetWorld()->GetDeltaSeconds());
 }
-
+ 
 void ASkater::LookUpAtRate(float Rate){
 	AddControllerPitchInput(Rate * DefLookUpRate * GetWorld()->GetDeltaSeconds());
 }
