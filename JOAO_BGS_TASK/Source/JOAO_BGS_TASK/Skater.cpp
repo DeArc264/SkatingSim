@@ -2,11 +2,9 @@
 
 
 #include "Skater.h"
-#include "GameFramework/SpringArmComponent.h"
-#include "Camera/CameraComponent.h"
 #include "GameFramework/Controller.h"
 #include "GameFramework/PlayerController.h"
-#include "Components/SkeletalMeshComponent.h"
+#include "GameFramework/CharacterMovementComponent.h"
 
 // Sets default values
 ASkater::ASkater()
@@ -47,14 +45,29 @@ void ASkater::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
 	PlayerInputComponent->BindAxis("MoveForward", this, &ASkater::MoveForward);
+	PlayerInputComponent->BindAxis("Break", this, &ASkater::Break);
 
 	PlayerInputComponent->BindAxis("Turn", this, &ASkater::TurnAtRate);
     PlayerInputComponent->BindAxis("LookUp", this, &ASkater::LookUpAtRate);
+
+	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ASkater::SkateJump);
 
 }
 
 void ASkater::MoveForward(float Value){
 	IsAccelerating = (Value > 0.0f);
+}
+
+void ASkater::Break(float Value){
+	if (Value > 0.0f) // Only apply break when value is positive
+	{
+		IsAccelerating = false;
+		Decel = 300.0f;
+	}
+	else
+	{
+		Decel = 90.0f; // Reset deceleration to normal when not breaking
+	}
 }
 
 void ASkater::TurnAtRate(float Rate){
@@ -63,4 +76,9 @@ void ASkater::TurnAtRate(float Rate){
 
 void ASkater::LookUpAtRate(float Rate){
 	AddControllerPitchInput(Rate * DefLookUpRate * GetWorld()->GetDeltaSeconds());
+}
+
+void ASkater::SkateJump(){
+	LaunchCharacter(FVector(0.0f, 0.0f, 600.0f), false, false);
+	UE_LOG(LogTemp, Warning, TEXT("Jumping"))
 }

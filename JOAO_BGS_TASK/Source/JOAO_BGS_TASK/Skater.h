@@ -4,7 +4,9 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "GameFramework/CharacterMovementComponent.h"
 #include "Skater.generated.h"
+
 
 UCLASS()
 class JOAO_BGS_TASK_API ASkater : public ACharacter
@@ -14,14 +16,6 @@ class JOAO_BGS_TASK_API ASkater : public ACharacter
 public:
 	// Sets default values for this character's properties
 	ASkater();
-
-	//Character acceleration
-	UFUNCTION(BlueprintCallable, Category = "Movement")
-		void MoveForward(float value);
-
-	//Camera rotation
-	void TurnAtRate(float Rate);
-	void LookUpAtRate(float Rate);
 
 protected:
 	// Called when the game starts or when spawned
@@ -34,14 +28,15 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Camera")
-		class USpringArmComponent* SpringArm;
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Camera")
-		class UCameraComponent* Camera;
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Mesh")
-		class USkeletalMeshComponent* MeshComponent;
+	//Character acceleration
+	void MoveForward(float value);
+	void Break(float value);
 
+	//Camera rotation
+	void TurnAtRate(float Rate);
+	void LookUpAtRate(float Rate);
 
+	void SkateJump();
 
 private:
 	//Movement variables
@@ -52,9 +47,10 @@ private:
 	UPROPERTY(EditAnywhere, Category = "Movement")
 		float Accel = 100.0f;
 	UPROPERTY(EditAnywhere, Category = "Movement")
-		float Decel = 75.0f;
+		float Decel = 90.0f;
 
 	bool IsAccelerating;
+	bool IsJumping;
 
 	//Camera variables
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Camera", meta = (AllowPrivateAccess = "true"))

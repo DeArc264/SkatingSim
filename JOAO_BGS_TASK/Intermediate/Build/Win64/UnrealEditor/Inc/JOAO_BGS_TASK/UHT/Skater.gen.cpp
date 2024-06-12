@@ -10,63 +10,12 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeSkater() {}
 // Cross Module References
 	ENGINE_API UClass* Z_Construct_UClass_ACharacter();
-	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
-	ENGINE_API UClass* Z_Construct_UClass_USkeletalMeshComponent_NoRegister();
-	ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 	JOAO_BGS_TASK_API UClass* Z_Construct_UClass_ASkater();
 	JOAO_BGS_TASK_API UClass* Z_Construct_UClass_ASkater_NoRegister();
 	UPackage* Z_Construct_UPackage__Script_JOAO_BGS_TASK();
 // End Cross Module References
-	DEFINE_FUNCTION(ASkater::execMoveForward)
-	{
-		P_GET_PROPERTY(FFloatProperty,Z_Param_value);
-		P_FINISH;
-		P_NATIVE_BEGIN;
-		P_THIS->MoveForward(Z_Param_value);
-		P_NATIVE_END;
-	}
 	void ASkater::StaticRegisterNativesASkater()
 	{
-		UClass* Class = ASkater::StaticClass();
-		static const FNameNativePtrPair Funcs[] = {
-			{ "MoveForward", &ASkater::execMoveForward },
-		};
-		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
-	}
-	struct Z_Construct_UFunction_ASkater_MoveForward_Statics
-	{
-		struct Skater_eventMoveForward_Parms
-		{
-			float value;
-		};
-		static const UECodeGen_Private::FFloatPropertyParams NewProp_value;
-		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
-#endif
-		static const UECodeGen_Private::FFunctionParams FuncParams;
-	};
-	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_ASkater_MoveForward_Statics::NewProp_value = { "value", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(Skater_eventMoveForward_Parms, value), METADATA_PARAMS(nullptr, 0) };
-	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ASkater_MoveForward_Statics::PropPointers[] = {
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ASkater_MoveForward_Statics::NewProp_value,
-	};
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ASkater_MoveForward_Statics::Function_MetaDataParams[] = {
-		{ "Category", "Movement" },
-		{ "Comment", "//Character acceleration\n" },
-		{ "ModuleRelativePath", "Skater.h" },
-		{ "ToolTip", "Character acceleration" },
-	};
-#endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ASkater_MoveForward_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ASkater, nullptr, "MoveForward", nullptr, nullptr, sizeof(Z_Construct_UFunction_ASkater_MoveForward_Statics::Skater_eventMoveForward_Parms), Z_Construct_UFunction_ASkater_MoveForward_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ASkater_MoveForward_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ASkater_MoveForward_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ASkater_MoveForward_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_ASkater_MoveForward()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ASkater_MoveForward_Statics::FuncParams);
-		}
-		return ReturnFunction;
 	}
 	IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(ASkater);
 	UClass* Z_Construct_UClass_ASkater_NoRegister()
@@ -76,22 +25,9 @@ void EmptyLinkFunctionForGeneratedCodeSkater() {}
 	struct Z_Construct_UClass_ASkater_Statics
 	{
 		static UObject* (*const DependentSingletons[])();
-		static const FClassFunctionLinkInfo FuncInfo[];
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_SpringArm_MetaData[];
-#endif
-		static const UECodeGen_Private::FObjectPropertyParams NewProp_SpringArm;
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_Camera_MetaData[];
-#endif
-		static const UECodeGen_Private::FObjectPropertyParams NewProp_Camera;
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_MeshComponent_MetaData[];
-#endif
-		static const UECodeGen_Private::FObjectPropertyParams NewProp_MeshComponent;
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_MaxSpeed_MetaData[];
 #endif
@@ -120,9 +56,6 @@ void EmptyLinkFunctionForGeneratedCodeSkater() {}
 		(UObject* (*)())Z_Construct_UClass_ACharacter,
 		(UObject* (*)())Z_Construct_UPackage__Script_JOAO_BGS_TASK,
 	};
-	const FClassFunctionLinkInfo Z_Construct_UClass_ASkater_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_ASkater_MoveForward, "MoveForward" }, // 832427533
-	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASkater_Statics::Class_MetaDataParams[] = {
 		{ "HideCategories", "Navigation" },
@@ -130,30 +63,6 @@ void EmptyLinkFunctionForGeneratedCodeSkater() {}
 		{ "ModuleRelativePath", "Skater.h" },
 	};
 #endif
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASkater_Statics::NewProp_SpringArm_MetaData[] = {
-		{ "Category", "Camera" },
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Skater.h" },
-	};
-#endif
-	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASkater_Statics::NewProp_SpringArm = { "SpringArm", nullptr, (EPropertyFlags)0x00100000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(ASkater, SpringArm), Z_Construct_UClass_USpringArmComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ASkater_Statics::NewProp_SpringArm_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ASkater_Statics::NewProp_SpringArm_MetaData)) };
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASkater_Statics::NewProp_Camera_MetaData[] = {
-		{ "Category", "Camera" },
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Skater.h" },
-	};
-#endif
-	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASkater_Statics::NewProp_Camera = { "Camera", nullptr, (EPropertyFlags)0x00100000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(ASkater, Camera), Z_Construct_UClass_UCameraComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ASkater_Statics::NewProp_Camera_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ASkater_Statics::NewProp_Camera_MetaData)) };
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASkater_Statics::NewProp_MeshComponent_MetaData[] = {
-		{ "Category", "Mesh" },
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Skater.h" },
-	};
-#endif
-	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASkater_Statics::NewProp_MeshComponent = { "MeshComponent", nullptr, (EPropertyFlags)0x00100000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(ASkater, MeshComponent), Z_Construct_UClass_USkeletalMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ASkater_Statics::NewProp_MeshComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ASkater_Statics::NewProp_MeshComponent_MetaData)) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASkater_Statics::NewProp_MaxSpeed_MetaData[] = {
 		{ "Category", "Movement" },
@@ -194,9 +103,6 @@ void EmptyLinkFunctionForGeneratedCodeSkater() {}
 #endif
 	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ASkater_Statics::NewProp_DefLookUpRate = { "DefLookUpRate", nullptr, (EPropertyFlags)0x0040000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(ASkater, DefLookUpRate), METADATA_PARAMS(Z_Construct_UClass_ASkater_Statics::NewProp_DefLookUpRate_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ASkater_Statics::NewProp_DefLookUpRate_MetaData)) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ASkater_Statics::PropPointers[] = {
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASkater_Statics::NewProp_SpringArm,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASkater_Statics::NewProp_Camera,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASkater_Statics::NewProp_MeshComponent,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASkater_Statics::NewProp_MaxSpeed,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASkater_Statics::NewProp_Accel,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASkater_Statics::NewProp_Decel,
@@ -211,11 +117,11 @@ void EmptyLinkFunctionForGeneratedCodeSkater() {}
 		"Game",
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
-		FuncInfo,
+		nullptr,
 		Z_Construct_UClass_ASkater_Statics::PropPointers,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
-		UE_ARRAY_COUNT(FuncInfo),
+		0,
 		UE_ARRAY_COUNT(Z_Construct_UClass_ASkater_Statics::PropPointers),
 		0,
 		0x009000A4u,
@@ -240,9 +146,9 @@ void EmptyLinkFunctionForGeneratedCodeSkater() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_JOAO_BGS_TASK_Source_JOAO_BGS_TASK_Skater_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ASkater, ASkater::StaticClass, TEXT("ASkater"), &Z_Registration_Info_UClass_ASkater, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASkater), 2411537379U) },
+		{ Z_Construct_UClass_ASkater, ASkater::StaticClass, TEXT("ASkater"), &Z_Registration_Info_UClass_ASkater, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASkater), 2018316369U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_JOAO_BGS_TASK_Source_JOAO_BGS_TASK_Skater_h_1130080604(TEXT("/Script/JOAO_BGS_TASK"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_JOAO_BGS_TASK_Source_JOAO_BGS_TASK_Skater_h_2092280761(TEXT("/Script/JOAO_BGS_TASK"),
 		Z_CompiledInDeferFile_FID_JOAO_BGS_TASK_Source_JOAO_BGS_TASK_Skater_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_JOAO_BGS_TASK_Source_JOAO_BGS_TASK_Skater_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
