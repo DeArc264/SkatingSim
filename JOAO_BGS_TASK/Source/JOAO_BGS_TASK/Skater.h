@@ -16,7 +16,8 @@ public:
 	ASkater();
 
 	//Character acceleration
-	void Accelerate(float value);
+	UFUNCTION(BlueprintCallable, Category = "Movement")
+		void MoveForward(float value);
 
 	//Camera rotation
 	void TurnAtRate(float Rate);
@@ -47,9 +48,11 @@ private:
 	float CurrSpeed = 0.0f;
 
 	UPROPERTY(EditAnywhere, Category = "Movement")
-		float MaxSpeed = 1500.0f;
+		float MaxSpeed = 2500.0f;
 	UPROPERTY(EditAnywhere, Category = "Movement")
 		float Accel = 100.0f;
+	UPROPERTY(EditAnywhere, Category = "Movement")
+		float Decel = 75.0f;
 
 	bool IsAccelerating;
 
@@ -57,5 +60,5 @@ private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Camera", meta = (AllowPrivateAccess = "true"))
 		float DefTurnRate = 45.0f;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Camera", meta = (AllowPrivateAccess = "true"))
-		float DefLookUpRate = 45.0f;
+		float DefLookUpRate = -45.0f;
 };

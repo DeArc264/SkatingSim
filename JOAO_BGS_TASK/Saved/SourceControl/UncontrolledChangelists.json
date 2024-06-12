@@ -5,7 +5,6 @@
 			"guid": "00000000000000000000000000000000",
 			"description": "Default Uncontrolled Changelist",
 			"files": [
-				"C:/Users/jrica/Documents/GitHub/SkatingSim/JOAO_BGS_TASK/Content/BaseGameMode.uasset",
 				"C:/Users/jrica/Documents/GitHub/SkatingSim/JOAO_BGS_TASK/Content/MyGameMode.uasset",
 				"C:/Users/jrica/Documents/GitHub/SkatingSim/JOAO_BGS_TASK/Content/Skater_BP.uasset",
 				"C:/Users/jrica/Documents/GitHub/SkatingSim/JOAO_BGS_TASK/Content/TestMap_HLOD0_Instancing.uasset",
@@ -152,7 +151,9 @@
 				"C:/Users/jrica/Documents/GitHub/SkatingSim/JOAO_BGS_TASK/Content/__ExternalActors__/TestMap/B/KK/HLUSKURQN15Q9FWAP2LY8Z.uasset",
 				"C:/Users/jrica/Documents/GitHub/SkatingSim/JOAO_BGS_TASK/Content/__ExternalActors__/TestMap/9/W3/J023TIPWB9JV30RX3HDZ4H.uasset",
 				"C:/Users/jrica/Documents/GitHub/SkatingSim/JOAO_BGS_TASK/Content/__ExternalActors__/TestMap/E/18/WLM7YXUWAK4I33OLA77FRU.uasset",
-				"C:/Users/jrica/Documents/GitHub/SkatingSim/JOAO_BGS_TASK/Content/TestMap.umap"
+				"C:/Users/jrica/Documents/GitHub/SkatingSim/JOAO_BGS_TASK/Content/TestMap.umap",
+				"C:/Users/jrica/Documents/GitHub/SkatingSim/JOAO_BGS_TASK/Content/SkaterChar_BP.uasset",
+				"C:/Users/jrica/Documents/GitHub/SkatingSim/JOAO_BGS_TASK/Content/BaseGameMode.uasset"
 			]
 		}
 	]

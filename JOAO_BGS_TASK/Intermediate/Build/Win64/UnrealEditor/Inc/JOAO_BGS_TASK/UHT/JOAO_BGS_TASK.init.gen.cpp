@@ -17,7 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeJOAO_BGS_TASK_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0xEC7F348B,
+				0x9C114F80,
 				0x8AE66DAB,
 				METADATA_PARAMS(nullptr, 0)
 			};
@@ -25,5 +25,5 @@ void EmptyLinkFunctionForGeneratedCodeJOAO_BGS_TASK_init() {}
 		}
 		return Z_Registration_Info_UPackage__Script_JOAO_BGS_TASK.OuterSingleton;
 	}
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_JOAO_BGS_TASK(Z_Construct_UPackage__Script_JOAO_BGS_TASK, TEXT("/Script/JOAO_BGS_TASK"), Z_Registration_Info_UPackage__Script_JOAO_BGS_TASK, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0xEC7F348B, 0x8AE66DAB));
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_JOAO_BGS_TASK(Z_Construct_UPackage__Script_JOAO_BGS_TASK, TEXT("/Script/JOAO_BGS_TASK"), Z_Registration_Info_UPackage__Script_JOAO_BGS_TASK, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x9C114F80, 0x8AE66DAB));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

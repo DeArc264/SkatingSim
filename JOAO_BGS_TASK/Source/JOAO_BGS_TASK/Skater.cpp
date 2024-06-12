@@ -14,24 +14,6 @@ ASkater::ASkater()
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
-
-	SpringArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("SpringArm"));
-	SpringArm->SetupAttachment(RootComponent);
-    SpringArm->TargetArmLength = 300.0f;
-	SpringArm->bUsePawnControlRotation = true;
-
-	Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));
-    Camera->SetupAttachment(SpringArm, USpringArmComponent::SocketName);
-	Camera->bUsePawnControlRotation = false;
-
-	MeshComponent = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("MeshComponent"));
-	MeshComponent->SetupAttachment(RootComponent);
-
-	static ConstructorHelpers::FObjectFinder<USkeletalMesh> SkaterMesh(TEXT("/Script/Engine.SkeletalMesh'/Game/PolygonCity/Meshes/Characters/SK_Character_Male_Hoodie.SK_Character_Male_Hoodie"));
-	if (SkaterMesh.Succeeded())
-	{
-		MeshComponent->SetSkeletalMesh(SkaterMesh.Object);
-	}
 }
 
 // Called when the game starts or when spawned
@@ -51,7 +33,8 @@ void ASkater::Tick(float DeltaTime)
 		CurrSpeed = FMath::Min(CurrSpeed, MaxSpeed);
 	}
 	else{
-		CurrSpeed = 0.0f;
+		CurrSpeed -= Decel * DeltaTime;
+		CurrSpeed = FMath::Max(CurrSpeed, 0.0f);
 	}
 
 	AddMovementInput(GetActorForwardVector(), CurrSpeed * DeltaTime);
@@ -63,14 +46,14 @@ void ASkater::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
-	PlayerInputComponent->BindAxis("Accelerate", this, &ASkater::Accelerate);
+	PlayerInputComponent->BindAxis("MoveForward", this, &ASkater::MoveForward);
 
 	PlayerInputComponent->BindAxis("Turn", this, &ASkater::TurnAtRate);
     PlayerInputComponent->BindAxis("LookUp", this, &ASkater::LookUpAtRate);
 
 }
 
-void ASkater::Accelerate(float Value){
+void ASkater::MoveForward(float Value){
 	IsAccelerating = (Value > 0.0f);
 }
 
