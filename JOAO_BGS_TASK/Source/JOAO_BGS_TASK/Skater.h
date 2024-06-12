@@ -54,7 +54,7 @@ private:
 
 	//Camera variables
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Camera", meta = (AllowPrivateAccess = "true"))
-		float DefTurnRate = 45.0f;
+		float DefTurnRate = 20.0f;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Camera", meta = (AllowPrivateAccess = "true"))
-		float DefLookUpRate = -45.0f;
+		float DefLookUpRate = -20.0f;
 };
