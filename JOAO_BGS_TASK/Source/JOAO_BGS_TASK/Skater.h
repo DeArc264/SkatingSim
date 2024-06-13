@@ -43,11 +43,11 @@ private:
 	float CurrSpeed = 0.0f;
 
 	UPROPERTY(EditAnywhere, Category = "Movement")
-		float MaxSpeed = 2500.0f;
+		float MaxSpeed = 2000.0f;
 	UPROPERTY(EditAnywhere, Category = "Movement")
 		float Accel = 100.0f;
 	UPROPERTY(EditAnywhere, Category = "Movement")
-		float Decel = 90.0f;
+		float Decel = 100.0f;
 
 	bool IsAccelerating;
 	bool IsJumping;

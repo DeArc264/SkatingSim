@@ -45,7 +45,7 @@ void ASkater::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
 	PlayerInputComponent->BindAxis("MoveForward", this, &ASkater::MoveForward);
-	//PlayerInputComponent->BindAxis("Break", this, &ASkater::Break);
+	PlayerInputComponent->BindAxis("Break", this, &ASkater::Break);
 
 	PlayerInputComponent->BindAxis("Turn", this, &ASkater::TurnAtRate);
     PlayerInputComponent->BindAxis("LookUp", this, &ASkater::LookUpAtRate);
@@ -66,7 +66,7 @@ void ASkater::Break(float Value){
 	}
 	else
 	{
-		Decel = 90.0f; // Reset deceleration to normal when not breaking
+		Decel = 100.0f; // Reset deceleration to normal when not breaking
 	}
 }
 
