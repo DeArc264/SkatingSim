@@ -14,11 +14,19 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define JOAO_BGS_TASK_Obstacle_generated_h
 
-#define FID_JOAO_BGS_TASK_Source_JOAO_BGS_TASK_Obstacle_h_12_SPARSE_DATA
-#define FID_JOAO_BGS_TASK_Source_JOAO_BGS_TASK_Obstacle_h_12_RPC_WRAPPERS
-#define FID_JOAO_BGS_TASK_Source_JOAO_BGS_TASK_Obstacle_h_12_RPC_WRAPPERS_NO_PURE_DECLS
-#define FID_JOAO_BGS_TASK_Source_JOAO_BGS_TASK_Obstacle_h_12_ACCESSORS
-#define FID_JOAO_BGS_TASK_Source_JOAO_BGS_TASK_Obstacle_h_12_INCLASS_NO_PURE_DECLS \
+#define FID_JOAO_BGS_TASK_Source_JOAO_BGS_TASK_Obstacle_h_14_SPARSE_DATA
+#define FID_JOAO_BGS_TASK_Source_JOAO_BGS_TASK_Obstacle_h_14_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execOnOverlapBegin);
+
+
+#define FID_JOAO_BGS_TASK_Source_JOAO_BGS_TASK_Obstacle_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execOnOverlapBegin);
+
+
+#define FID_JOAO_BGS_TASK_Source_JOAO_BGS_TASK_Obstacle_h_14_ACCESSORS
+#define FID_JOAO_BGS_TASK_Source_JOAO_BGS_TASK_Obstacle_h_14_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAObstacle(); \
 	friend struct Z_Construct_UClass_AObstacle_Statics; \
@@ -27,7 +35,7 @@ public: \
 	DECLARE_SERIALIZER(AObstacle)
 
 
-#define FID_JOAO_BGS_TASK_Source_JOAO_BGS_TASK_Obstacle_h_12_INCLASS \
+#define FID_JOAO_BGS_TASK_Source_JOAO_BGS_TASK_Obstacle_h_14_INCLASS \
 private: \
 	static void StaticRegisterNativesAObstacle(); \
 	friend struct Z_Construct_UClass_AObstacle_Statics; \
@@ -36,7 +44,7 @@ public: \
 	DECLARE_SERIALIZER(AObstacle)
 
 
-#define FID_JOAO_BGS_TASK_Source_JOAO_BGS_TASK_Obstacle_h_12_STANDARD_CONSTRUCTORS \
+#define FID_JOAO_BGS_TASK_Source_JOAO_BGS_TASK_Obstacle_h_14_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AObstacle(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AObstacle) \
@@ -50,7 +58,7 @@ public: \
 	NO_API virtual ~AObstacle();
 
 
-#define FID_JOAO_BGS_TASK_Source_JOAO_BGS_TASK_Obstacle_h_12_ENHANCED_CONSTRUCTORS \
+#define FID_JOAO_BGS_TASK_Source_JOAO_BGS_TASK_Obstacle_h_14_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AObstacle(AObstacle&&); \
@@ -62,27 +70,27 @@ public: \
 	NO_API virtual ~AObstacle();
 
 
-#define FID_JOAO_BGS_TASK_Source_JOAO_BGS_TASK_Obstacle_h_9_PROLOG
-#define FID_JOAO_BGS_TASK_Source_JOAO_BGS_TASK_Obstacle_h_12_GENERATED_BODY_LEGACY \
+#define FID_JOAO_BGS_TASK_Source_JOAO_BGS_TASK_Obstacle_h_11_PROLOG
+#define FID_JOAO_BGS_TASK_Source_JOAO_BGS_TASK_Obstacle_h_14_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_JOAO_BGS_TASK_Source_JOAO_BGS_TASK_Obstacle_h_12_SPARSE_DATA \
-	FID_JOAO_BGS_TASK_Source_JOAO_BGS_TASK_Obstacle_h_12_RPC_WRAPPERS \
-	FID_JOAO_BGS_TASK_Source_JOAO_BGS_TASK_Obstacle_h_12_ACCESSORS \
-	FID_JOAO_BGS_TASK_Source_JOAO_BGS_TASK_Obstacle_h_12_INCLASS \
-	FID_JOAO_BGS_TASK_Source_JOAO_BGS_TASK_Obstacle_h_12_STANDARD_CONSTRUCTORS \
+	FID_JOAO_BGS_TASK_Source_JOAO_BGS_TASK_Obstacle_h_14_SPARSE_DATA \
+	FID_JOAO_BGS_TASK_Source_JOAO_BGS_TASK_Obstacle_h_14_RPC_WRAPPERS \
+	FID_JOAO_BGS_TASK_Source_JOAO_BGS_TASK_Obstacle_h_14_ACCESSORS \
+	FID_JOAO_BGS_TASK_Source_JOAO_BGS_TASK_Obstacle_h_14_INCLASS \
+	FID_JOAO_BGS_TASK_Source_JOAO_BGS_TASK_Obstacle_h_14_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define FID_JOAO_BGS_TASK_Source_JOAO_BGS_TASK_Obstacle_h_12_GENERATED_BODY \
+#define FID_JOAO_BGS_TASK_Source_JOAO_BGS_TASK_Obstacle_h_14_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_JOAO_BGS_TASK_Source_JOAO_BGS_TASK_Obstacle_h_12_SPARSE_DATA \
-	FID_JOAO_BGS_TASK_Source_JOAO_BGS_TASK_Obstacle_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_JOAO_BGS_TASK_Source_JOAO_BGS_TASK_Obstacle_h_12_ACCESSORS \
-	FID_JOAO_BGS_TASK_Source_JOAO_BGS_TASK_Obstacle_h_12_INCLASS_NO_PURE_DECLS \
-	FID_JOAO_BGS_TASK_Source_JOAO_BGS_TASK_Obstacle_h_12_ENHANCED_CONSTRUCTORS \
+	FID_JOAO_BGS_TASK_Source_JOAO_BGS_TASK_Obstacle_h_14_SPARSE_DATA \
+	FID_JOAO_BGS_TASK_Source_JOAO_BGS_TASK_Obstacle_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_JOAO_BGS_TASK_Source_JOAO_BGS_TASK_Obstacle_h_14_ACCESSORS \
+	FID_JOAO_BGS_TASK_Source_JOAO_BGS_TASK_Obstacle_h_14_INCLASS_NO_PURE_DECLS \
+	FID_JOAO_BGS_TASK_Source_JOAO_BGS_TASK_Obstacle_h_14_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

@@ -1,0 +1,20 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\jrica\\documents\\github\\skatingsim\\joao_bgs_task\\source\\joao_bgs_task\\scores.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\jrica\\documents\\github\\skatingsim\\joao_bgs_task\\intermediate\\build\\win64\\x64\\joao_bgs_taskeditor\\development\\engine\\sharedpch.engine.shadowerrors.inclorderunreal5_0.h.pch",
+        "Includes": [
+            "c:\\users\\jrica\\documents\\github\\skatingsim\\joao_bgs_task\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\joao_bgs_task\\definitions.joao_bgs_task.h",
+            "c:\\users\\jrica\\documents\\github\\skatingsim\\joao_bgs_task\\source\\joao_bgs_task\\scores.h",
+            "d:\\ue_5.2\\engine\\source\\runtime\\engine\\classes\\gameframework\\hud.h",
+            "d:\\ue_5.2\\engine\\source\\runtime\\engine\\classes\\gameframework\\hudhitbox.h",
+            "d:\\ue_5.2\\engine\\source\\runtime\\engine\\classes\\gameframework\\debugtextinfo.h",
+            "d:\\ue_5.2\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\debugtextinfo.generated.h",
+            "d:\\ue_5.2\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\hud.generated.h",
+            "c:\\users\\jrica\\documents\\github\\skatingsim\\joao_bgs_task\\intermediate\\build\\win64\\unrealeditor\\inc\\joao_bgs_task\\uht\\scores.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

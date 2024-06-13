@@ -4,7 +4,9 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "Components/BoxComponent.h"
 #include "Obstacle.generated.h"
+
 
 UCLASS()
 class JOAO_BGS_TASK_API AObstacle : public AActor
@@ -23,9 +25,10 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	int ScoreIncrease = 1;
+private:
+	UPROPERTY(VisibleAnywhere, Category = "Components")
+    UBoxComponent* BoxComponent;
 
-	UPROPERTY(EditAnywhere)
-	bool Slider = false;
-
+    UFUNCTION(BlueprintCallable, Category = "Collide")
+    void OnOverlapBegin();
 };

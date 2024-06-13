@@ -2,6 +2,10 @@
 
 
 #include "Obstacle.h"
+#include "Components/BoxComponent.h"
+#include "Skater.h"
+#include "SkateGameMode.h"
+#include "Kismet/GameplayStatics.h"
 
 // Sets default values
 AObstacle::AObstacle()
@@ -25,3 +29,12 @@ void AObstacle::Tick(float DeltaTime)
 
 }
 
+void AObstacle::OnOverlapBegin()
+{
+    // Get the GameMode and update the score
+    ASkateGameMode* GameMode = Cast<ASkateGameMode>(UGameplayStatics::GetGameMode(GetWorld()));
+    if (GameMode)
+    {
+	    GameMode->UpdateScore(1);
+    }
+}

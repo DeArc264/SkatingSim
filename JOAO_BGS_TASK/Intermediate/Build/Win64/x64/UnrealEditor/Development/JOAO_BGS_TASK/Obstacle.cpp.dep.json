@@ -7,7 +7,23 @@
         "Includes": [
             "c:\\users\\jrica\\documents\\github\\skatingsim\\joao_bgs_task\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\joao_bgs_task\\definitions.joao_bgs_task.h",
             "c:\\users\\jrica\\documents\\github\\skatingsim\\joao_bgs_task\\source\\joao_bgs_task\\obstacle.h",
-            "c:\\users\\jrica\\documents\\github\\skatingsim\\joao_bgs_task\\intermediate\\build\\win64\\unrealeditor\\inc\\joao_bgs_task\\uht\\obstacle.generated.h"
+            "c:\\users\\jrica\\documents\\github\\skatingsim\\joao_bgs_task\\intermediate\\build\\win64\\unrealeditor\\inc\\joao_bgs_task\\uht\\obstacle.generated.h",
+            "c:\\users\\jrica\\documents\\github\\skatingsim\\joao_bgs_task\\source\\joao_bgs_task\\skategamemode.h",
+            "d:\\ue_5.2\\engine\\source\\runtime\\engine\\classes\\gameframework\\gamemodebase.h",
+            "d:\\ue_5.2\\engine\\source\\runtime\\engine\\classes\\engine\\serverstatreplicator.h",
+            "d:\\ue_5.2\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\serverstatreplicator.generated.h",
+            "d:\\ue_5.2\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gamemodebase.generated.h",
+            "c:\\users\\jrica\\documents\\github\\skatingsim\\joao_bgs_task\\intermediate\\build\\win64\\unrealeditor\\inc\\joao_bgs_task\\uht\\skategamemode.generated.h",
+            "d:\\ue_5.2\\engine\\source\\runtime\\engine\\classes\\kismet\\gameplaystatics.h",
+            "d:\\ue_5.2\\engine\\source\\runtime\\engine\\classes\\kismet\\kismetsystemlibrary.h",
+            "d:\\ue_5.2\\engine\\source\\runtime\\coreuobject\\public\\uobject\\propertyaccessutil.h",
+            "d:\\ue_5.2\\engine\\source\\runtime\\coreuobject\\public\\assetregistry\\arfilter.h",
+            "d:\\ue_5.2\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\kismetsystemlibrary.generated.h",
+            "d:\\ue_5.2\\engine\\source\\runtime\\engine\\classes\\sound\\dialoguetypes.h",
+            "d:\\ue_5.2\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\dialoguetypes.generated.h",
+            "d:\\ue_5.2\\engine\\source\\runtime\\engine\\classes\\kismet\\gameplaystaticstypes.h",
+            "d:\\ue_5.2\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gameplaystaticstypes.generated.h",
+            "d:\\ue_5.2\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gameplaystatics.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

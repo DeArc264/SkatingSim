@@ -7,6 +7,10 @@
         "Includes": [
             "c:\\users\\jrica\\documents\\github\\skatingsim\\joao_bgs_task\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\joao_bgs_task\\definitions.joao_bgs_task.h",
             "c:\\users\\jrica\\documents\\github\\skatingsim\\joao_bgs_task\\source\\joao_bgs_task\\obstacle.h",
+            "d:\\ue_5.2\\engine\\source\\runtime\\engine\\classes\\components\\boxcomponent.h",
+            "d:\\ue_5.2\\engine\\source\\runtime\\engine\\classes\\components\\shapecomponent.h",
+            "d:\\ue_5.2\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\shapecomponent.generated.h",
+            "d:\\ue_5.2\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\boxcomponent.generated.h",
             "c:\\users\\jrica\\documents\\github\\skatingsim\\joao_bgs_task\\intermediate\\build\\win64\\unrealeditor\\inc\\joao_bgs_task\\uht\\obstacle.generated.h"
         ],
         "ImportedModules": [],
