@@ -12,6 +12,9 @@ ASkater::ASkater()
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
+	GetCharacterMovement()->bOrientRotationToMovement = false;
+    bUseControllerRotationYaw = false;
+
 }
 
 // Called when the game starts or when spawned
@@ -44,12 +47,16 @@ void ASkater::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
+	//Player movements
 	PlayerInputComponent->BindAxis("MoveForward", this, &ASkater::MoveForward);
 	PlayerInputComponent->BindAxis("Break", this, &ASkater::Break);
+	PlayerInputComponent->BindAxis("TurnChar", this, &ASkater::CharTurn);
 
-	PlayerInputComponent->BindAxis("Turn", this, &ASkater::TurnAtRate);
+	//Camera movements
+	PlayerInputComponent->BindAxis("TurnCam", this, &ASkater::TurnAtRate);
     PlayerInputComponent->BindAxis("LookUp", this, &ASkater::LookUpAtRate);
 
+	//Jumping action
 	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ASkater::SkateJump);
 
 }
@@ -70,6 +77,12 @@ void ASkater::Break(float Value){
 	}
 }
 
+//Turn the character
+void ASkater::CharTurn(float Value){
+	AddActorLocalRotation(FRotator(0.0f, Value * DefTurnRate * GetWorld()->GetDeltaSeconds(), 0.0f));
+}
+
+//Control the camera
 void ASkater::TurnAtRate(float Rate){
 	AddControllerYawInput(Rate * DefTurnRate * GetWorld()->GetDeltaSeconds());
 }
@@ -78,7 +91,7 @@ void ASkater::LookUpAtRate(float Rate){
 	AddControllerPitchInput(Rate * DefLookUpRate * GetWorld()->GetDeltaSeconds());
 }
 
+//Jump action
 void ASkater::SkateJump(){
 	LaunchCharacter(FVector(0.0f, 0.0f, 600.0f), false, false);
-	UE_LOG(LogTemp, Warning, TEXT("Jumping"))
 }

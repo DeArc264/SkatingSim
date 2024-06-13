@@ -32,6 +32,9 @@ public:
 	void MoveForward(float value);
 	void Break(float value);
 
+	//Turn character
+	void CharTurn(float value);
+
 	//Camera rotation
 	void TurnAtRate(float Rate);
 	void LookUpAtRate(float Rate);
@@ -54,7 +57,7 @@ private:
 
 	//Camera variables
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Camera", meta = (AllowPrivateAccess = "true"))
-		float DefTurnRate = 20.0f;
+		float DefTurnRate = 45.0f;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Camera", meta = (AllowPrivateAccess = "true"))
-		float DefLookUpRate = -20.0f;
+		float DefLookUpRate = -45.0f;
 };
